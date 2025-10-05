@@ -1,60 +1,41 @@
-# Miraz's Solution — Smart Waste Sorter (Demo)
+# Miraz's Solution — Premium (ready-to-deploy)
 
-This is a ready-to-run Streamlit app that suggests a waste disposal category from an uploaded image or short description.
-It's a lightweight **demo** that uses keyword mapping (no heavy ML), so it runs quickly and is easy to deploy.
+This project is a polished, mobile-friendly Streamlit demo for a Smart Waste Sorter.
+Files included:
+- `app.py` (main app)
+- `requirements.txt`
+- `.streamlit/config.toml`
+- `assets/icons/*.png` (logo and category icons)
 
-## What's inside
-- `app.py` — Streamlit app
-- `requirements.txt` — Python dependencies
+## Minimal steps to make it live (zero coding)
 
-## How you can use it (no coding if you deploy to Streamlit Cloud or Hugging Face Spaces)
-### Option A — Run locally (quick)
-1. Download and unzip the project.
-2. Open a terminal and `cd` into the project folder.
-3. (Optional) create & activate a Python virtual environment:
-   ```bash
-   python -m venv venv
-   # Windows PowerShell:
-   venv\Scripts\Activate.ps1
-   # macOS / Linux:
-   source venv/bin/activate
-   ```
-4. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-5. Run:
-   ```bash
-   streamlit run app.py
-   ```
-6. The app opens at `http://localhost:8501`.
+### Option A — Upload via GitHub web (recommended if you're new)
+1. Go to https://github.com and create a **new repository** (example name: `miraz-solution`).
+2. Open your new repository page on GitHub.
+3. Click **Add file** → **Upload files**.
+4. Drag and drop **all files and folders** from this project (including the `.streamlit` folder and `assets` folder). You can also upload the zip content by unzipping locally first.
+5. Scroll down and click **Commit changes** (green button).
+6. Go to https://share.streamlit.io/ and **Sign in with GitHub**.
+7. Click **New app** → choose your GitHub repo (`yourusername/miraz-solution`) → Branch: `main` → Main file path: `app.py` → Click **Deploy**.
+8. Wait 1–3 minutes. Your app URL will appear and is shareable.
 
-### Option B — Deploy and share (no-code, recommended)
-You can deploy the app to **Streamlit Community Cloud** or **Hugging Face Spaces**. Both provide a public URL you can share.
+### Option B — Push using Git (if you have Git installed)
+```bash
+cd /path/to/unzipped/project
+git init
+git add .
+git commit -m "Add Miraz's Solution premium app"
+# create a GitHub repo and copy the 'git remote add' command shown on GitHub,
+# or run:
+git remote add origin https://github.com/<your-username>/<repo-name>.git
+git branch -M main
+git push -u origin main
+```
 
-#### Deploy on Streamlit Community Cloud (easiest)
-1. Create a GitHub repository and push the project (see below).
-2. Go to https://share.streamlit.io/ and sign in with GitHub.
-3. Click **Create app**, select your GitHub repo, branch `main`, and `app.py` as the file.
-4. Deploy — after a few minutes you'll get a shareable URL.
+After pushing, create a new Streamlit app on https://share.streamlit.io and select this repo (same steps as above). Streamlit will auto-build and run.
 
-#### Deploy on Hugging Face Spaces (Streamlit)
-1. Create a Hugging Face account at https://huggingface.co/.
-2. Create a new **Space**, choose the **Streamlit** SDK.
-3. Upload `app.py` and `requirements.txt` (or push via Git).
-4. The Space will build and give a public URL.
-
-## If you want me to fully deploy for you
-I cannot deploy to external hosting without access to your GitHub/Hugging Face account. If you want me to *create and deploy* the Space or repo for you, you can:
-- Provide a GitHub repository URL where I can push (or)
-- Create the repo yourself and give me permission (or)
-- Follow the 3–4 clicks above — it's fast and painless.
-
-## Next steps (optional improvements)
-- Replace keyword mapping with a fine-tuned image model for local waste streams.
-- Add language translations (Bangla).
-- Add a correction button to collect labeled examples from users.
+## If you need me to push for you
+I cannot push to your GitHub or Streamlit account. If you'd like, create the empty GitHub repo and give me the repo URL; I will generate the exact `git` commands you need to run locally to push (copy-paste).
 
 ---
-
-*Prepared for Miraz — if you'd like, I can also prepare a ZIP of the project for you to download directly.*
+Enjoy your new premium-looking Miraz's Solution app!
